@@ -1,0 +1,35 @@
+---
+title: Virgile Benaitier
+---
+
+<!-- List Card Équipe -->
+<div class="first">
+    <div class="container text-center">
+        <div class="row">
+            <% data.profiles.each do |pro| %>
+            <div class="col-sm-6">
+                <div class="wrapper">
+                    <div class="header">
+                        <span class="avatar"><img class="profil" src="images/profil_<%=pro.img%>.png"></span>
+                        <h2 style="color:#242629;"><%= pro.name %></h2>
+                        <p><%= pro.profile %></p>
+                    </div>
+                    <div class="footer">
+                        <p class="bio">"<%= pro.bio %>"</p>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<!-- List Cities -->
+<div id="main">
+            <% data.cities.each do |city| %>
+                    <article class="thumb" style="background-image:url('images/<%= city.img %>.jpg');">
+                        <h2><%= city.name %></h2>
+                        <p><%= city.descr %></p>
+                    </article>
+            <% end %>
+</div>
